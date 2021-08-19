@@ -78,6 +78,9 @@ body {
   cursor: pointer;
   opacity: 1;
 }
+path.current__floor {
+  opacity: 1;
+}
 .counter__grop {
   display: flex;
   flex-direction: column;
