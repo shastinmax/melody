@@ -101,7 +101,7 @@ path.current__floor {
   line-height: 44px;
   color: #635854;
 }
-.counter {
+.floor-counter {
   font-family: "Bebas Neue Cyrillic", sans-serif;
   color: #635854;
   font-size: 124px;
@@ -114,4 +114,105 @@ path.current__floor {
   border: none;
   color: #fff;
   cursor: pointer;
+}
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s;
+}
+.is-open {
+  opacity: 1;
+  transform: scale(1);
+}
+.modal__dialog {
+  max-width: 1000px;
+  min-height: 565px;
+  background-color: #fff;
+  flex-grow: 1;
+  display: flex;
+  opacity: 0;
+  position: relative;
+  transform: translateY(-10%);
+  transition: transform 0.2s, opacity 0.2s;
+  transition-delay: 0.2s;
+}
+.is-open > .modal__dialog {
+  opacity: 1;
+  transform: translateY(0);
+}
+.modal__image {
+  width: 60%;
+  background-color: #ebebeb;
+  text-align: center;
+  padding: 50px;
+}
+.flats path {
+  opacity: 0;
+}
+.flats path:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.modal__title {
+  font-family: "Bebas Neue Cyrillic", sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+.modal__info {
+  width: 40%;
+  padding: 50px 46px;
+}
+.flat__link {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #635854;
+  text-decoration: none;
+}
+.flat__item {
+  margin-bottom: 10px;
+}
+.flat__list {
+  list-style: none;
+  margin-top: 55px;
+  padding: 0;
+}
+.flat__link:hover {
+  color: #3596f5;
+  text-decoration: underline;
+}
+.modul__alert {
+  padding-top: 56px;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #635854;
+}
+.modal-close-button {
+  position: absolute;
+  right: 27px;
+  top: 38px;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+}
+path.current-flats {
+  opacity: 1; /* убираем прозрачность */
+}
+a.current-flats-item {
+  color: #3596f5; /* меняем цвет */
+  text-decoration: underline; /* добавляем подчёркивание */
+  cursor: pointer; /* сделали, чтобы при наведении на path была рука :D */
 }
